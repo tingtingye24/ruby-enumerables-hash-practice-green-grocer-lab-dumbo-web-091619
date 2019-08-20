@@ -51,4 +51,9 @@ end
 
 def checkout(cart, coupons)
   # code here
+  coupons.each do |coupon|
+    if cart.keys.include?(coupon[:item])
+      if cart[coupon[:item]][:count] >= coupon[:num]
+        
+    end
 end
