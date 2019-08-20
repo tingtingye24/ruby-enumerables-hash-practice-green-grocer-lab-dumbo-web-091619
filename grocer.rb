@@ -53,5 +53,11 @@ def checkout(cart, coupons)
   # code here
   sortedCart = consolidate_cart(cart)
   couponCart = apply_coupons(sortedCart)
-  clearedCart = apply_clearance(c)
+  clearedCart = apply_clearance(couponCart)
+  
+  total = 0 
+  clearedCart.each do |value|
+    total = total + (clearedCart[:price] * clearedCart[:count])
+  end
+  total
 end
