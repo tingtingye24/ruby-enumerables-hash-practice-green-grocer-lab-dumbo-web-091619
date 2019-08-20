@@ -51,9 +51,7 @@ end
 
 def checkout(cart, coupons)
   # code here
-  coupons.each do |coupon|
-    if cart.keys.include?(coupon[:item])
-      if cart[coupon[:item]][:count] >= coupon[:num]
-        
-    end
+  sortedCart = consolidate_cart(cart)
+  couponCart = apply_coupons(sortedCart)
+  clearedCart = apply_clearance(c)
 end
